@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    int count =0, count01 =0;
+    for(int i =0; ch[i] != '\0'; i++)
+        count++;
+    for(int i =0; i < count; i++)
+    {
+        if(ch[i] != ' ')
+            count01++;
+        else if(ch[i] == ' ')
+        {
+            printf("%d ", count01);
+            count01 =0;
+        }
+    }
+    printf("%d ", count01);
+}
