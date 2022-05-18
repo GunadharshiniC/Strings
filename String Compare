@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    scanf("\n");
+    char ch01[100];
+    scanf("%[^\n]s", ch01);
+    int cnt = 0, count =0;
+    for(int i =0; ch[i] != '\0'; i++)
+        cnt++;
+    for(int i =0, j =0; ch[i] != '\0', ch[j] != '\0'; i++, j++)
+    {
+     if(ch[i] == ch01[j])
+         count++;
+    }
+    if(count == cnt)
+        printf("Equal");
+    else
+        printf("Not Equal");
+}
