@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    scanf("\n");
+    char ch1, ch2;
+    scanf("%c %c", &ch1, &ch2);
+    int count = 0;
+    for(int i =0; ch[i] != '\0'; i++)
+        count++;
+    for(int i =0; i<count; i++)
+    {
+        if(ch1 == ch[i])
+            ch[i] = ch2;
+    }
+    printf("%s", ch);
+}
