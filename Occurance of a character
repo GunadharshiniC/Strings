@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    scanf("\n");
+    char Char;
+    scanf("%c", &Char);
+    int count = 0, count01 = 0;
+    for(int i = 0; ch[i] != '\0'; i++)
+        count++;
+    for(int i =0; i < count; i++)
+    {
+        if(Char == ch[i])
+        {
+            printf("%d", i+1);
+            count01++;
+            break;
+        }
+    }
+    if(count01 == 0)
+        printf("%d", -1);
+}
