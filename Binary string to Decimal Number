@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main()
+{
+  char ch[32];
+  scanf("%s", ch);
+  int count =0, power = 1, sum =0;
+  for(int i =0; ch[i] != '\0'; i++)
+    count++;
+  for(int i = count-1; i >= 0; i--)
+  {
+      if(ch[i] == '1')
+        sum = sum + (1 * power);
+      else if (ch[i] == '0')
+        sum = sum + (0 * power);
+      power =  power * 2;
+  }
+  printf("%d", sum);
+}
