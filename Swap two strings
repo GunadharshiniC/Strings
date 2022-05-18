@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char ch[100];
+    scanf("%s", ch);
+    char ch01[100];
+    scanf("%s", ch01);
+    char res[100];
+    strcpy(res, ch);
+    strcpy(ch, ch01);
+    strcpy(ch01, res);
+    printf("%s\n%s", ch, ch01);
+}
