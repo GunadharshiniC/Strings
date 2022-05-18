@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    char ch[200];
+    scanf("%s", ch);
+    char ch01[200];
+    scanf("\n%s", ch01);
+    int num;
+    scanf("\n%d", &num);
+    int count = 0, count02 =0;
+    for(int i =0; ch[i] != '\0'; i++)
+        count++;
+    for(int i =0; ch01[i] != '\0'; i++)
+        count02++;
+    for(int i =0; i < count, num != 0; i++)
+    {
+        ch[i] = ch01[i];
+        num--;
+    }
+    printf("%s", ch);
+    printf("\n%s", ch01);
+}
