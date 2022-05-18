@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    char ch01[200];
+    char ch02[200];
+    scanf("%[^\n]s", ch01);
+    scanf("\n%[^\n]s", ch02);
+    int count001;
+    scanf("\n%d", &count001);
+    int count = count001;
+    int count01 =0;
+    for(int i =0, j =0; ch01[i] != '\0', ch02[j] != '\0', count != 0; i++, j++, count--)
+     { 
+         if(ch01[i] == ch02[j])
+            count01++;
+         else 
+         {
+             printf("%d", 0);
+             break;
+         }
+     }
+   if(count001 == count01)
+       printf("%d", 1);    
+}
