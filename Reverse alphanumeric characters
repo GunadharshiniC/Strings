@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    int count =0;
+    for(int i =0; ch[i] != '\0'; i++)
+        count++;
+    char temp;
+    int i =0, j = count -1; 
+    while((i < count/2) && (j > i))
+    {
+     if((ch[i] <= 'z' && ch[i] >= 'a') || (ch[i] <='9' && ch[i] >= '1'))
+     {
+            if((ch[j] <= 'z' && ch[j] >= 'a') || (ch[j] <='9' && ch[j] >= '1'))
+            {
+                temp = ch[i];
+                ch[i] = ch[j];
+                ch[j] = temp;
+                i++;
+                j--;
+            }
+            else
+                j--;
+     }
+     else
+         i++;  
+    }
+    printf("%s", ch);
+}
