@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    int count =0;
+    int count01 = 1;
+    for(int i =0; ch[i] != '\0'; i++)
+      count++;
+    for(int i =0, j = i+1; i<count, j< count ; i++, j++)
+     { 
+          if(ch[i] <= ch[j])
+              count01++;
+         else 
+         {  
+             printf("No");
+             break;
+         }
+     }
+     if(count == count01)
+         printf("Yes");
+}
