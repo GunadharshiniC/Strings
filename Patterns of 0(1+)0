@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    char ch[200];
+    scanf("%s", ch);
+    int count =0, count01 =0;
+    for(int i =0; ch[i] != '\0'; i++)
+           count++;
+    for(int  i =0; i < count; i++)
+    { 
+        if(ch[i] == '0')
+        {
+          for(int j = i+ 1; j < count; j++)
+          {
+              if(ch[i] == ch[j] && ch[i+1] != ch[j])
+              {
+                       count01++;
+                       i = j;
+              }
+          }
+        }
+    }
+    printf("%d", count01);
+}
