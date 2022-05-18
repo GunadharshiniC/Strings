@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    int arr[100] = {'\0'};
+    int count =0, count01 = 0;
+    for(int i =0; ch[i] != '\0'; i++)
+        count++;
+    int j= 0;
+    for(int i =0; i<count ; i++)
+    {
+      if(ch[i] != 32)
+           count01++;
+       else
+       {   
+            arr[j] = count01;
+            j++;
+            count01 = 0;  
+       }
+    }
+     arr[j] = count01;
+     int max = arr[0], min = arr[0];
+     for(int i = 1; arr[i] != '\0'; i++)
+     {          
+         if(arr[i] > max)
+             max = arr[i];
+     }
+     for(int i = 1; arr[i] != '\0'; i++)
+     {          
+         if(arr[i] < min)
+             min = arr[i];
+     }
+     printf("Length of the longest word = %d\n", max);
+     printf("Length of the shortest word = %d", min); 
+}
