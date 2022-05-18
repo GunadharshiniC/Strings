@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    int count =0;
+    for(int i =0; ch[i] != '\0'; i++)
+        count++;
+    int count01 =0;
+    for(int i =0; i<count; i++)
+    {
+        if(ch[i] == 44 || ch[i] == 46 || ch[i]  == 33 || ch[i] == 39 || ch[i] == 63 )
+            count01++;
+    }
+    printf("Number of punctuation characters = %d", count01);
+}
