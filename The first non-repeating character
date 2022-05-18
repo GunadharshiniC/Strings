@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    int length = strlen(ch);
+    int count =0;
+    for(int i =0; ch[i] != '\0'; i++)
+    {         
+        count =0;
+        for(int j = i +1; ch[j] != '\0'; j++)
+        {
+            if(ch[i] == ch[j])
+            {
+                ch[j] = '*';
+                count++;
+            }
+        }
+        if(count == 0 && ch[i] != '*')
+        {
+            printf("The first non-repeating character is: %c", ch[i]);
+            break;
+        }
+        ch[i] = '*';
+    }
+    int i =0, count01 = 0;
+    while(ch[i] == '*' && ch[i] != '\0')
+    {
+        count01++;
+        i++;
+    }
+    if(count01 == length)
+        printf("All the characters are repetitive");
+}
