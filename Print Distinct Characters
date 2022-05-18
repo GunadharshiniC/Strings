@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    int count= 0;
+    for(int i =0; ch[i] != '\0'; i++)
+        count++;
+    for(int i =0; i < count; i++)
+    {
+      for(int j = i+1; j < count; j++)
+      {
+          if(ch[i] == ch[j])
+              ch[j] = 59;
+      }
+    }
+    for(int i =0; i< count; i++)
+    {
+      if(ch[i] != 59)
+          printf("%c", ch[i]);
+    }
+}
