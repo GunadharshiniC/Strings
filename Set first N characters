@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    char ch[200];
+    scanf("%[^\n]s", ch);
+    int count = 0, num;
+    scanf("\n%d", &num);
+    char alp;
+    scanf(" %c", &alp);
+    for(int i = 0; i < num; i++)
+        ch[i] = alp;
+    printf("%s", ch);
+}
