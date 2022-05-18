@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+    scanf("%[^\n]s", ch);
+    int count =0, count01 =0, sum =0;
+    char joo;
+    for(int i =0; ch[i] != '\0'; i++)
+        count++;
+    for(int i = 0; i < count; i++)
+    {              count01 =0;
+        for(int j = i+1; j<count; j++)
+        {         
+             if(ch[i] == ch[j])
+                 count01++;
+        }
+       if(count01 != 0 && count01 > sum)
+       {
+         joo = ch[i];
+         sum = count01;
+      }     
+    }
+    printf("%c %d", joo, sum);
+}
